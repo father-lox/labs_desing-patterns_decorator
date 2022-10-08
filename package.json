@@ -1,0 +1,28 @@
+{
+  "name": "ts-project-template",
+  "version": "1.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "watch": {
+    "build": {
+      "patterns": [
+        "source"
+      ],
+      "extensions": "ts"
+    }
+  },
+  "scripts": {
+    "build": "rmdir build /s /q && npx tsc",
+    "start": "npx npm-watch"
+  },
+  "keywords": [
+    "ts",
+    "template"
+  ],
+  "author": "",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "npm-watch": "^0.11.0",
+    "typescript": "^4.8.4"
+  }
+}
