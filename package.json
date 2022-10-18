@@ -1,7 +1,7 @@
 {
-  "name": "ts-project-template",
+  "name": "software-architecture_lab-2",
   "version": "1.0.0",
-  "description": "",
+  "description": "In this serial labs I learnd design patterns. Lab 2: Decorator",
   "main": "build/index.js",
   "watch": {
     "build": {
