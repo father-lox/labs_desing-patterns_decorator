@@ -2,14 +2,14 @@ import IProductCard from './IProductCard.js';
 import Product from './Product.js';
 
 export default class ProductCard implements IProductCard {
-    createProductCard(productData: Product): HTMLLIElement {
+    private createProductCard(): HTMLLIElement {
         const card: HTMLLIElement = document.createElement('li');
         card.classList.add('product-card');
 
         return card;
     }
 
-    createProductName(productData: Product): HTMLHeadingElement {
+    private createProductName(productData: Product): HTMLHeadingElement {
         const productName: HTMLHeadingElement = document.createElement('h2');
         productName.classList.add('product-card__name');
         productName.innerText = productData.name;
@@ -17,7 +17,7 @@ export default class ProductCard implements IProductCard {
         return productName;
     }
 
-    createProductDescription(productData: Product): HTMLParagraphElement {
+    private createProductDescription(productData: Product): HTMLParagraphElement {
         const productDescription: HTMLParagraphElement = document.createElement('p');
         productDescription.classList.add('product-card__description');
         productDescription.innerText = productData.description;
@@ -25,7 +25,7 @@ export default class ProductCard implements IProductCard {
         return productDescription;
     }
 
-    createLabels(productData: Product): HTMLDivElement {
+    private createLabels(productData: Product): HTMLDivElement {
         const productLabels: HTMLDivElement = document.createElement('div');
         productLabels.classList.add('product-card__lables');
 
@@ -40,7 +40,7 @@ export default class ProductCard implements IProductCard {
         return productLabels;
     }
 
-    createPrice(productData: Product): HTMLDivElement {
+    private createPrice(productData: Product): HTMLDivElement {
         const productPriceSection: HTMLDivElement = document.createElement('div');
         productPriceSection.classList.add('product-card__price-section');
 
@@ -54,7 +54,7 @@ export default class ProductCard implements IProductCard {
     }
 
     render(productData: Product): HTMLLIElement {
-        const productCard: HTMLLIElement = this.createProductCard(productData);
+        const productCard: HTMLLIElement = this.createProductCard();
         productCard.append(this.createProductName(productData));
         productCard.append(this.createProductDescription(productData));
         productCard.append(this.createLabels(productData));

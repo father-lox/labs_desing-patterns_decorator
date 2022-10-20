@@ -1,6 +1,6 @@
 import Decorator from "./Decorator.js";
-import IProductCard from "./IProductCard.js";
-import Product from "./Product.js";
+import IProductCard from "../IProductCard.js";
+import Product from "../Product.js";
 
 export default class DecoratorShareLable extends Decorator {
     constructor(productCard: IProductCard, private _shareDescription: string) {

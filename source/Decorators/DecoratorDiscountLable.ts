@@ -1,10 +1,14 @@
 import Decorator from "./Decorator.js";
-import IProductCard from "./IProductCard.js";
-import Product from "./Product.js";
+import IProductCard from "../IProductCard.js";
+import Product from "../Product.js";
 
 export default class DecoratorDiscountLable extends Decorator {
     constructor(productCard: IProductCard, private _discount: number) {
         super(productCard);
+    }
+
+    private calculateDiscountPrice(price: number): number {
+        return (price - price * Math.abs(this._discount) / 100)
     }
 
     private createDiscountLabels(): HTMLSpanElement {
@@ -19,9 +23,9 @@ export default class DecoratorDiscountLable extends Decorator {
             const discountPrice: HTMLParagraphElement = document.createElement('p');
             discountPrice.classList.add('product-card__price', 'product-card__price_with-share');
             
-            const priceWithDiscount: number = productData.price - productData.price * Math.abs(this._discount) / 100;
-            discountPrice.innerText = `${priceWithDiscount}$`;
-                
+            const priceWithDiscount: number = this.calculateDiscountPrice(productData.price);
+            discountPrice.innerText = `${priceWithDiscount.toFixed(2)}$`;
+            
             return discountPrice;
     }
 

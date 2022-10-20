@@ -1,7 +1,7 @@
 import ProductCard from "./ProductCard.js";
 import Product from "./Product.js";
-import DecoratorDiscountLable from "./DecoratorDiscountLable.js";
-import DecoratorShareLable from "./DecoratorShareLable.js";
+import DecoratorDiscountLable from "./Decorators/DecoratorDiscountLable.js";
+import DecoratorShareLable from "./Decorators/DecoratorShareLable.js";
 
 
 const googlePixel7: Product = new Product(
@@ -17,4 +17,4 @@ const app: HTMLUListElement= document.querySelector('#app .list-poroducts') as H
 app.append(
     new DecoratorShareLable(
         new DecoratorDiscountLable(
-            new ProductCard(), 20), 'reiciendis rerum cumque minus fugiat ullam consequatur').render(googlePixel7));
+            new ProductCard(), 93), 'reiciendis rerum cumque minus fugiat ullam consequatur').render(googlePixel7));
