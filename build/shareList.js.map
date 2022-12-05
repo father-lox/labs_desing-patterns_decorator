@@ -1,0 +1,1 @@
+{"version":3,"file":"shareList.js","sourceRoot":"","sources":["../source/shareList.ts"],"names":[],"mappings":"AAAA,IAAI,SAAS,GAAG;IACZ,kCAAkC;IAClC,0EAA0E;IAC1E,iBAAiB;CACpB,CAAA;AAED,MAAM,CAAC,OAAO,UAAU,mBAAmB;IACvC,OAAO,SAAS,CAAC,IAAI,CAAC,KAAK,CAAC,IAAI,CAAC,MAAM,EAAE,GAAG,SAAS,CAAC,MAAM,CAAC,CAAC,CAAC;AACnE,CAAC"}
